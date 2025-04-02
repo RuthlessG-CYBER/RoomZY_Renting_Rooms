@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Rentify_For_Renting_RoomsTheme {
-                UiScreen()
+                LandingUI()
             }
         }
     }
