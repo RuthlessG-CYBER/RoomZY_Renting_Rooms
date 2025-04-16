@@ -30,9 +30,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun LandingUI(){
+fun LandingUI(navController: NavController){
     Box(modifier = Modifier.fillMaxSize()){
         Image(painter = painterResource(R.drawable.travel),
             contentDescription = "Login Image",
@@ -48,7 +49,7 @@ fun LandingUI(){
                         "\n" +
                         "TO " +
                         "\n" +
-                        "RENTIFY",
+                        "ROOMZY",
                 modifier = Modifier.padding(start = 15.dp, top = 100.dp, end = 15.dp),
                 color = Color.White,
                 fontSize = 40.sp,
@@ -68,7 +69,7 @@ fun LandingUI(){
                 contentAlignment = Alignment.Center
             ){
                 Column {
-                    TextButton(onClick = {},
+                    TextButton(onClick = {navController.navigate("SignUpUI")},
                         modifier = Modifier.fillMaxWidth().padding(start = 15.dp, end = 15.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.White.copy(alpha = 0.7f),
@@ -82,7 +83,7 @@ fun LandingUI(){
                         )
                     }
                     Spacer(modifier = Modifier.height(10.dp))
-                    TextButton(onClick = {},
+                    TextButton(onClick = {navController.navigate("LogInUI")},
                         modifier = Modifier.fillMaxWidth().padding(start = 15.dp, end = 15.dp),
                         colors = ButtonDefaults.buttonColors(
                             containerColor = Color.White.copy(alpha = 0.7f),
@@ -90,7 +91,7 @@ fun LandingUI(){
                         )
                     ) {
                         Text(
-                            text = "LOGIN",
+                            text = "LOG IN",
                             modifier = Modifier,
                             fontSize = 20.sp
                         )

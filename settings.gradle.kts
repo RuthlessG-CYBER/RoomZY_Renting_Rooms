@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Rentify_For_Renting_Rooms"
+rootProject.name = "Roomzy_For_Renting_Rooms"
 include(":app")
  
